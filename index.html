@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is my project of freeCodeCamp's Responsive Web Design Projects - Build a Personal Portfolio Webpage project"
+    />
+    <title>Welcome!</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <ul>
+          <li><a href="#welcome-section">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="welcome-section">
+        <div class="container">
+          <header>
+            <h1>
+              Hi, I'm <span class="name-highlight">Jem Galeon</span>.<br />
+              I'm a <i>full-stack web developer</i>.
+            </h1>
+            <p>
+              <i class="icon fas fa-map-marker-alt"></i>Makati City, Philippines
+            </p>
+            <a
+              href="https://www.linkedin.com/in/jemgaleon/"
+              id="profile-link"
+              target="_blank"
+              >View profile</a
+            >
+          </header>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <header>
+            <p>
+              "Coding is my passion; Coffee is my source.
+              <i class="fas fa-mug-hot"></i>"
+            </p>
+          </header>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="container">
+          <header>
+            <h2>Technical Skills</h2>
+          </header>
+          <div class="content">
+            <div class="card">
+              <h3>JavaScript</h3>
+              <div class="rating" title="I'm good at it">
+                <i class="icon fa fa-star"></i>
+                <i class="icon fa fa-star"></i>
+                <i class="icon fa fa-star"></i>
+                <i class="icon fa fa-star"></i>
+                <i class="icon far fa-star"></i>
+              </div>
+            </div>
+            <div class="card">
+              <h3>ReactJS</h3>
+              <div class="rating" title="I'm starting to learn it">
+                <i class="icon fa fa-star"></i>
+                <i class="icon far fa-star"></i>
+                <i class="icon far fa-star"></i>
+                <i class="icon far fa-star"></i>
+                <i class="icon far fa-star"></i>
+              </div>
+            </div>
+            <div class="card">
+              <h3>HTML</h3>
+              <div class="rating" title="I'm experienced">
+                <i class="icon fa fa-star"></i>
+                <i class="icon fa fa-star"></i>
+                <i class="icon fa fa-star"></i>
+                <i class="icon far fa-star"></i>
+                <i class="icon far fa-star"></i>
+              </div>
+            </div>
+            <div class="card">
+              <h3>CSS</h3>
+              <div class="rating" title="I'm experienced">
+                <i class="icon fa fa-star"></i>
+                <i class="icon fa fa-star"></i>
+                <i class="icon fa fa-star"></i>
+                <i class="icon far fa-star"></i>
+                <i class="icon far fa-star"></i>
+              </div>
+            </div>
+            <div class="card">
+              <h3>C#</h3>
+              <div class="rating" title="I'm good at it">
+                <i class="icon fa fa-star"></i>
+                <i class="icon fa fa-star"></i>
+                <i class="icon fa fa-star"></i>
+                <i class="icon fa fa-star"></i>
+                <i class="icon far fa-star"></i>
+              </div>
+            </div>
+            <div class="card">
+              <h3>ASP.NET</h3>
+              <div class="rating" title="I'm experienced">
+                <i class="icon fa fa-star"></i>
+                <i class="icon fa fa-star"></i>
+                <i class="icon fa fa-star"></i>
+                <i class="icon far fa-star"></i>
+                <i class="icon far fa-star"></i>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Web Services</h3>
+              <div class="rating" title="I'm experienced">
+                <i class="icon fa fa-star"></i>
+                <i class="icon fa fa-star"></i>
+                <i class="icon fa fa-star"></i>
+                <i class="icon far fa-star"></i>
+                <i class="icon far fa-star"></i>
+              </div>
+            </div>
+            <div class="card">
+              <h3>SQL</h3>
+              <div class="rating" title="I'm experienced">
+                <i class="icon fa fa-star"></i>
+                <i class="icon fa fa-star"></i>
+                <i class="icon fa fa-star"></i>
+                <i class="icon far fa-star"></i>
+                <i class="icon far fa-star"></i>
+              </div>
+            </div>
+            <div class="card">
+              <h3>DevOps</h3>
+              <div class="rating" title="I'm starting to learn it">
+                <i class="icon fa fa-star"></i>
+                <i class="icon far fa-star"></i>
+                <i class="icon far fa-star"></i>
+                <i class="icon far fa-star"></i>
+                <i class="icon far fa-star"></i>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Git</h3>
+              <div class="rating" title="I've done it a few times">
+                <i class="icon fa fa-star"></i>
+                <i class="icon fa fa-star"></i>
+                <i class="icon far fa-star"></i>
+                <i class="icon far fa-star"></i>
+                <i class="icon far fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <header>
+            <h2>Projects</h2>
+          </header>
+          <div class="content">
+            <div class="card project-tile">
+              <a
+                href="https://github.com/jemgaleon/vanillajs-plugin-dbgrid"
+                target="_blank"
+                class="project-link"
+                ><div class="project-img">
+                  <img
+                    src="./asset/vanillajs-plugin-dbgrid.PNG"
+                    alt="GridView JS"
+                  />
+                </div>
+                <h3 class="project-title">GridView JS</h3>
+              </a>
+              <ul class="tags">
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+
+            <div class="card project-tile">
+              <a
+                href="https://github.com/jemgaleon/quasarjs-todoapp"
+                target="_blank"
+                class="project-link"
+              >
+                <div class="project-img">
+                  <img src="./asset/quasarjs-todo-app.PNG" alt="Todo App" />
+                </div>
+                <h3 class="project-title">Todo App</h3></a
+              >
+              <ul class="tags">
+                <li>QuasarJS</li>
+                <li>NodeJS</li>
+                <li>ReactJS</li>
+                <li>ExpressJS</li>
+                <li>FeatherJS</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+            <div class="card project-tile">
+              <a
+                href="https://github.com/jemgaleon/vanillajs-search-giphy"
+                target="_blank"
+                class="project-link"
+                ><div class="project-img">
+                  <img src="./asset/search-giphy.PNG" alt="Search GIPHY" />
+                </div>
+                <h3 class="project-title">Search GIPHY</h3></a
+              >
+              <ul class="tags">
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+            <div class="card project-tile">
+              <a
+                href="https://github.com/jemgaleon/vanillajs-table-generator"
+                target="_blank"
+                class="project-link"
+                ><div class="project-img">
+                  <img
+                    src="./asset/vanillajs-table-generator.PNG"
+                    alt="Table Generator"
+                  />
+                </div>
+                <h3 class="project-title">Table Generator</h3>
+              </a>
+              <ul class="tags">
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+            <div class="card project-tile">
+              <a
+                href="https://github.com/jemgaleon/reactjs-todo-list"
+                target="_blank"
+                class="project-link"
+                ><div class="project-img">
+                  <img src="./asset/reactjs-todo-list.PNG" alt="Todo List" />
+                </div>
+                <h3 class="project-title">Todo List</h3>
+              </a>
+              <ul class="tags">
+                <li>NodeJS</li>
+                <li>ReactJS</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+            <div class="card project-tile">
+              <a
+                href="https://github.com/jemgaleon/vanillajs-game-rockpaperscissors"
+                target="_blank"
+                class="project-link"
+                ><div class="project-img">
+                  <img
+                    src="./asset/vanillajs-game-rockpaperscissors.PNG"
+                    alt="Rock Paper Scissors"
+                  />
+                </div>
+                <h3 class="project-title">Rock Paper Scissors</h3></a
+              >
+              <ul class="tags">
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+            <div class="card project-tile">
+              <a
+                href="https://github.com/jemgaleon/tribute-page"
+                target="_blank"
+                class="project-link"
+                ><div class="project-img">
+                  <img src="./asset/tribute-page.PNG" alt="Tibute Page" />
+                </div>
+                <h3 class="project-title">Tribute Page</h3>
+              </a>
+              <ul class="tags">
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+            <div class="card project-tile">
+              <a
+                href="https://github.com/jemgaleon/survey-form"
+                target="_blank"
+                class="project-link"
+                ><div class="project-img">
+                  <img src="./asset/survey-form.PNG" alt="Survey Form" />
+                </div>
+                <h3 class="project-title">Survey Form</h3></a
+              >
+              <ul class="tags">
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+            <div class="card project-tile">
+              <a
+                href="https://github.com/jemgaleon/product-landing-page"
+                target="_blank"
+                class="project-link"
+                ><div class="project-img">
+                  <img
+                    src="./asset/product-landing-page.PNG"
+                    alt="Product Landing Page"
+                  />
+                </div>
+                <h3 class="project-title">Product Landing Page</h3></a
+              >
+              <ul class="tags">
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+            <div class="card project-tile">
+              <a
+                href="https://github.com/jemgaleon/technical-documentation-page"
+                target="_blank"
+                class="project-link"
+                ><div class="project-img">
+                  <img
+                    src="./asset/technical-documentation-page.PNG"
+                    alt="Technical Documentation Page"
+                  />
+                </div>
+                <h3 class="project-title">
+                  Technical<br />Documentation Page
+                </h3></a
+              >
+              <ul class="tags">
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+            <div class="card view-more">
+              <a href="https://github.com/jemgaleon" target="_blank"
+                >View more...</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <header>
+            <h2>
+              Let's work together... Let's do it!
+            </h2>
+          </header>
+          <div class="content">
+            <a
+              href="https://www.facebook.com/jemgaleon"
+              id="facebook"
+              target="_blank"
+              ><i class="icon fab fa-facebook-square"></i>Facebook</a
+            >
+            <a href="https://github.com/jemgaleon" id="github" target="_blank"
+              ><i class="icon fab fa-github-square"></i>GitHub</a
+            >
+            <a
+              href="https://www.linkedin.com/in/jemgaleon/"
+              id="linkedin"
+              target="_blank"
+              ><i class="icon fab fa-linkedin"></i>LinkedIn</a
+            >
+            <a href="https://twitter.com/jemgaleon" id="twitter" target="_blank"
+              ><i class="icon fab fa-twitter-square"></i>Twitter</a
+            >
+            <a href="mailto:jemgaleon@gmail.com" id="email"
+              ><i class="icon fas fa-envelope"></i>Send me an email</a
+            >
+            <a href="skype:jemgaleon?call" id="skype"
+              ><i class="icon fab fa-skype"></i>Call me</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>&copy; Copyright 2020</span>
+    </footer>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+  </body>
+</html>

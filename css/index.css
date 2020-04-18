@@ -1,0 +1,384 @@
+:root {
+  --color-dark-primary: #424242;
+  --color-dark-light: #6d6d6d;
+  --color-dark-dark: #1b1b1b;
+  --color-light-primary: #f5f5f5;
+  --color-blue-primary: #4fc3f7;
+  --color-red-primary: #ef5350;
+  --color-red-dark: #b61827;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+  cursor: default;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 200;
+  line-height: 1.4;
+  color: var(--color-dark-primary);
+}
+
+/* Global */
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: inherit;
+  color: inherit;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Global - Custom class */
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.icon {
+  margin-right: 0.5rem;
+}
+
+/* Nav */
+#navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem;
+  background: var(--color-dark-primary);
+  z-index: 1;
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+@media (min-width: 768px) {
+  #navbar li {
+    margin-right: 2rem;
+  }
+
+  #navbar ul {
+    justify-content: flex-end;
+  }
+}
+
+#navbar a {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--color-light-primary);
+  transition: all 0.3s;
+}
+
+#navbar a:hover {
+  color: var(--color-red-primary);
+  cursor: pointer;
+}
+
+#navbar a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.1rem;
+  margin-top: 0.8rem;
+  background: var(--color-red-primary);
+  transition: all 0.3s;
+}
+
+#navbar a:hover::after {
+  width: 100%;
+}
+
+/* Section - Welcome */
+#welcome-section {
+  color: var(--color-light-primary);
+  background: var(--color-dark-primary);
+  height: 100vh;
+  width: 100%;
+}
+
+#welcome-section .container {
+  height: inherit;
+}
+
+#welcome-section header {
+  height: inherit;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-flow: column;
+}
+
+#welcome-section h1 {
+  margin-bottom: 2.5rem;
+}
+
+#welcome-section p {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  #welcome-section p {
+    font-size: 3rem;
+  }
+}
+
+.name-highlight {
+  color: var(--color-red-primary);
+}
+
+#profile-link {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 1rem 4rem;
+  background: var(--color-red-primary);
+  border-radius: 3rem;
+  transition: all 0.3s ease 0.1s;
+}
+
+@media (min-width: 768px) {
+  #profile-link {
+    font-size: 2rem;
+  }
+}
+
+#profile-link:hover {
+  background: var(--color-red-dark);
+}
+
+/* Section - About */
+#about {
+  padding: 6rem 0;
+  background: var(--color-red-primary);
+  color: var(--color-dark-primary);
+  text-align: center;
+}
+
+#about p {
+  font-size: 2.5rem;
+  font-family: monospace;
+  font-style: italic;
+}
+
+/* Section - Skills */
+#skills {
+  padding: 6rem 0;
+}
+
+#skills header {
+  text-align: center;
+}
+
+#skills .content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#skills .card {
+  padding: 2rem 3rem;
+  border: 0.1rem solid var(--color-dark-primary);
+  margin: 1.5rem;
+  transition: all 0.3s;
+}
+
+#skills .card:hover {
+  color: var(--color-light-primary);
+  background: var(--color-dark-primary);
+}
+
+#skills .rating {
+  width: 13.3rem;
+  color: var(--color-red-primary);
+}
+
+/* Section - Projects */
+#projects {
+  padding: 6rem 0;
+  background: var(--color-dark-primary);
+  color: var(--color-light-primary);
+}
+
+#projects header {
+  text-align: center;
+}
+
+#projects .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#projects .card {
+  width: 100%;
+  margin: 1.5rem;
+  background: var(--color-light-primary);
+  color: var(--color-dark-light);
+  text-align: center;
+  box-shadow: 0 1rem 0.8rem var(--color-dark-dark);
+}
+
+@media (min-width: 768px) {
+  #projects .card {
+    width: 35rem;
+  }
+}
+
+.project-link {
+  transition: all 0.3s;
+}
+
+.project-link:hover img {
+  height: 200%;
+}
+
+.project-link:hover h3 {
+  color: var(--color-red-primary);
+}
+
+.project-img {
+  height: 30rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+/* todo fix this one */
+.project-img img {
+  height: 150%;
+  transition: all 0.3s;
+  filter: grayscale(100%);
+}
+
+.project-title {
+  margin-bottom: 2rem;
+  transition: all 0.3s;
+}
+
+#projects .tags {
+  list-style: none;
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+#projects .tags li {
+  font-size: 1rem;
+  margin: 0 0 1rem 1rem;
+  padding: 0.5rem 1.5rem;
+  background: var(--color-red-primary);
+  color: var(--color-light-primary);
+  border-radius: 2rem;
+  transition: all 0.3s;
+}
+
+#projects .tags li::before {
+  content: "#";
+}
+
+#projects .tags li:hover {
+  background: var(--color-red-dark);
+}
+
+#projects .view-more {
+  background: var(--color-light-primary);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-flow: column;
+  padding: 5rem;
+  transition: all 0.3s;
+}
+
+#projects .view-more:hover {
+  background: var(--color-red-primary);
+  cursor: pointer;
+}
+
+/* Section - Contact */
+#contact {
+  padding: 6rem 0;
+}
+
+#contact header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#contact .content {
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#contact a {
+  font-size: 2.5rem;
+  transition: all 0.3s;
+}
+
+#contact a:hover {
+  color: var(--color-red-primary);
+}
+
+/* Footer */
+footer {
+  margin-top: 5rem;
+  padding: 2rem 0;
+  text-align: center;
+}
