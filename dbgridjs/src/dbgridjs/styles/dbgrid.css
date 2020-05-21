@@ -1,0 +1,149 @@
+.dbgridjs table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.dbgridjs table * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.dbgridjs table.empty {
+    width: 100%;
+}
+
+.dbgridjs caption {
+    color: #f7f6f3;
+    background: #5d7b9d;
+    text-align: left;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.dbgridjs .loader {
+    margin: 2px;
+    width: 20px;
+}
+
+/*Todo: fix IE display: sticky alternative
+.dbgridjs thead {
+    display: block;
+}
+
+.dbgridjs tbody {
+    display: block;
+    background: #f7f6f3;
+    overflow: auto;
+}*/
+
+.dbgridjs thead th,
+.dbgridjs tfoot th {
+    background: #5d7b9d;
+}
+
+.dbgridjs thead th a,
+.dbgridjs thead th span,
+.dbgridjs tfoot th a {
+    color: #fff;
+}
+
+/* For Non-IE browsers */
+.dbgridjs thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.dbgridjs tfoot th {
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+}
+
+.dbgridjs thead th a.sortable,
+.dbgridjs tfoot th a:not(.selected) {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.dbgridjs tfoot th a:not(.selected) {
+    font-weight: normal;
+}
+
+.dbgridjs tbody tr {
+    cursor: pointer;
+}
+
+.dbgridjs tbody tr:not(.toggle-row):hover {
+    text-decoration: underline;
+}
+
+.dbgridjs tbody tr.selected {
+    font-weight: bolder;
+    color: #fff !important;
+    background: #6E6E6E !important;
+}
+
+/* tbody tr:not(.hidden):nth-child(odd) { */
+.dbgridjs tbody tr:not(.hidden) {
+    color: #000;
+    background: #f7f6f3;
+}
+
+.dbgridjs thead th,
+.dbgridjs tbody td,
+.dbgridjs tfoot th {
+    text-align: left;
+    vertical-align: top;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    /* text-overflow: ellipsis; */
+}
+
+.dbgridjs thead th.icon-toggle,
+.dbgridjs tbody td.icon-toggle {
+    vertical-align: top;
+}
+
+.dbgridjs thead th.icon-toggle img {
+    margin: -12px -8px;
+}
+
+.dbgridjs tbody td.icon-toggle img {
+    margin: -8px -5px;
+}
+
+.dbgridjs thead th.icon-size,
+.dbgridjs tbody td.icon-size {
+    width: 28px;
+}
+
+.dbgridjs thead th span,
+.dbgridjs thead th a,
+.dbgridjs thead th img,
+.dbgridjs tbody td span {
+    display: inline-block;
+    padding: 3px;
+}
+
+.dbgridjs tfoot th a {
+    display: inline-block;
+    padding: 1.5px;
+}
+
+.dbgridjs .hidden {
+    display: none;
+}
+
+/* tableception */
+.dbgridjs .tableception thead th {
+    z-index: 0;
+}
+
+.dbgridjs .tableception thead tr {
+    cursor: default;
+}

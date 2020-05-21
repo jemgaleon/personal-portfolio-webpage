@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GridView JavaScript Plugin</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+    <link rel="stylesheet" href="./src/dbgridjs/styles/dbgrid.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>
+        A simple JavaScript implementation of GridView .NET server control
+      </h1>
+      <div class="grid-group">
+        <h2>GridView - hardcoded data</h2>
+        <div id="grdClient"></div>
+      </div>
+      <div class="grid-group">
+        <h2>GridView - add data</h2>
+        <button id="btnAddItem" class="my-1">
+          Add row item
+        </button>
+        <div id="grdCustom"></div>
+      </div>
+    </div>
+    <script src="./src/scripts/extension.js"></script>
+    <script src="./src/scripts/polyfill.js"></script>
+    <script src="./src/dbgridjs/dbgrid.js"></script>
+    <script>
+      let exposeMe = null;
+      let grdClient = null;
+      let grdCustom = null;
+
+      (function () {
+        btnAddItem.addEventListener("click", addItem);
+
+        function addItem() {
+          let cell = [-1, 1, ""];
+
+          cell[0] = grdCustom.rowData.length + 1;
+          cell[1] = grdCustom.rowData.length + 1;
+          cell[2] = grdCustom.rowData.length + 1 + " - Item";
+          grdCustom.addRow(cell);
+        }
+
+        grdClient = new DBGrid({
+          wrapper: "#grdClient",
+          dataKeyNames: "ID",
+          allowPaging: true,
+          pageSize: 3,
+          pagerCount: 5,
+          width: 700,
+          columns: [
+            { type: "checkbox", hideColumn: false, autoCheck: true },
+            {
+              fieldName: "ID",
+              fieldHeader: "Key",
+              fieldType: "number",
+              fieldWidth: 0,
+              displayOrder: 1,
+              hideField: true,
+              isDataKeyField: true,
+            },
+            {
+              fieldName: "PAGE_NUMBER",
+              fieldHeader: "Page #",
+              fieldType: "number",
+              fieldWidth: 110,
+              displayOrder: 2,
+              hideField: false,
+              isDataKeyField: false,
+            },
+            {
+              fieldName: "NUMBER",
+              fieldHeader: "Number",
+              fieldType: "number",
+              fieldWidth: 110,
+              displayOrder: 2,
+              hideField: false,
+              isDataKeyField: false,
+            },
+            {
+              fieldName: "ITEM_DESC",
+              fieldHeader: "Description",
+              fieldType: "string",
+              fieldWidth: 115,
+              displayOrder: 3,
+              hideField: false,
+              isDataKeyField: false,
+            },
+            {
+              fieldName: "DATE",
+              fieldHeader: "Date Created",
+              fieldType: "date",
+              fieldWidth: 200,
+              displayOrder: 4,
+              hideField: false,
+              isDataKeyField: false,
+            },
+          ],
+          rowData: [
+            [1, 1, 3, "A", "02/01/20"],
+            [2, 1, 2, "B", "02/02/20"],
+            [3, 1, 1, "B", "02/03/20"],
+            [4, 2, 1, "C", "02/04/20"],
+            [5, 2, 2, "C", "02/05/20"],
+            [6, 2, 1, "A", "02/06/20"],
+            [7, 3, 4, "A", "02/07/20"],
+            [8, 3, 4, "A", "02/08/20"],
+            [9, 3, 5, "A", "02/09/20"],
+
+            [10, 4, 3, "A", "01/01/20"],
+            [11, 4, 2, "B", "01/01/20"],
+            [12, 4, 1, "B", "01/01/20"],
+            [13, 5, 1, "C", "01/01/20"],
+            [14, 5, 2, "C", "01/01/20"],
+            [15, 5, 1, "A", "01/02/20"],
+            [16, 6, 4, "A", "01/02/20"],
+            [17, 6, 4, "A", "01/02/20"],
+            [18, 6, 5, "A", "01/02/20"],
+
+            [19, 7, 3, "A", "03/01/20"],
+            [20, 7, 2, "B", "03/01/20"],
+            [21, 7, 1, "B", "03/01/20"],
+            [22, 8, 1, "C", "03/01/20"],
+            [23, 8, 2, "C", "03/01/20"],
+            [24, 8, 1, "A", "03/02/20"],
+            [25, 9, 4, "A", "03/02/20"],
+            [26, 9, 4, "A", "03/02/20"],
+            [27, 9, 5, "A", "03/02/20"],
+
+            [28, 10, 3, "A", "04/01/20"],
+            [29, 10, 2, "B", "04/01/20"],
+            [30, 10, 1, "B", "04/01/20"],
+            [31, 11, 1, "C", "04/01/20"],
+            [32, 11, 2, "C", "04/02/20"],
+            [33, 11, 1, "A", "04/02/20"],
+            [34, 12, 4, "A", "04/02/20"],
+            [35, 12, 4, "A", "04/02/20"],
+            [36, 12, 5, "A", "04/02/20"],
+
+            [37, 13, 3, "A", "05/01/20"],
+            [38, 13, 2, "B", "05/01/20"],
+            [39, 13, 1, "B", "05/01/20"],
+            [40, 14, 1, "C", "05/01/20"],
+            [41, 14, 2, "C", "05/02/20"],
+            [42, 14, 1, "A", "05/02/20"],
+            [43, 15, 4, "A", "05/02/20"],
+            [44, 15, 4, "A", "05/02/20"],
+            [45, 15, 5, "A", "05/02/20"],
+
+            [46, 16, 3, "A", "06/01/20"],
+            [47, 16, 2, "B", "06/01/20"],
+            [48, 16, 2, "B", "06/01/20"],
+            [49, 17, 1, "C", "06/01/20"],
+            [50, 17, 2, "C", "06/02/20"],
+            [51, 17, 1, "A", "06/02/20"],
+            [52, 18, 4, "A", "06/02/20"],
+            [53, 18, 4, "A", "06/02/20"],
+            [54, 18, 5, "A", "06/02/20"],
+          ],
+          events: {
+            check: function (checkboxAll, row, sender, event) {
+              const grid = this;
+
+              console.log(
+                `Primary key selected: ${
+                  row.dataset[grid.options.dataKeyNames]
+                }`
+              );
+            },
+            selectedIndexChanged: function (sender, event) {
+              const grid = this;
+
+              console.log(
+                `Primary key selected: ${
+                  sender.dataset[grid.options.dataKeyNames]
+                }`
+              );
+            },
+          },
+        });
+
+        grdCustom = new DBGrid({
+          wrapper: "#grdCustom",
+          dataKeyNames: "KEY",
+          emptyDataText: "Click button to add item.",
+          allowPaging: true,
+          pagerCount: 5,
+          pageSize: 5,
+          width: 220,
+          columns: [
+            { type: "checkbox", hideColumn: false, autoCheck: true },
+            {
+              fieldName: "KEY",
+              fieldHeader: "Key",
+              fieldType: "number",
+              fieldWidth: 100,
+              displayOrder: 1,
+              hideField: true,
+              isDataKeyField: true,
+            },
+            {
+              fieldName: "ITEM_NUMBER",
+              fieldHeader: "Item #",
+              fieldType: "number",
+              fieldWidth: 100,
+              displayOrder: 2,
+              hideField: false,
+              isDataKeyField: false,
+            },
+            {
+              fieldName: "ITEM_DESC",
+              fieldHeader: "Description",
+              fieldType: "string",
+              fieldWidth: 100,
+              displayOrder: 3,
+              hideField: false,
+              isDataKeyField: false,
+            },
+          ],
+          rowData: [],
+        });
+      })();
+    </script>
+  </body>
+</html>
